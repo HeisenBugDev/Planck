@@ -1,16 +1,16 @@
 [
 {
-  "modid": "examplemod",
-  "name": "Example Mod",
-  "description": "Example placeholder mod.",
+  "modid": "planck-framework",
+  "name": "Planck Framework",
+  "description": "A Minecraft mod framework built on MinecraftForge",
   "version": "${version}",
   "mcversion": "${mcversion}",
   "url": "",
   "updateUrl": "",
-  "authorList": ["ExampleDude"],
-  "credits": "The Forge and FML guys, for making this example",
+  "authorList": ["MatAlcDev","hunterboener","jadar"],
+  "credits": "The Forge and FML guys, for making this awesome API forge is.",
   "logoFile": "",
   "screenshots": [],
   "dependencies": []
-}
+}	
 ]
