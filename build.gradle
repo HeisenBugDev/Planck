@@ -17,8 +17,11 @@ buildscript {
 
 apply plugin: 'forge'
 
-version = "$System.env.WERCKER_GIT_COMMIT".substring(0,7)
-group= "heisenbugdev.planck" 
+if (System.getenv('WERCKER_GIT_COMMIT') != null) {
+    version = "$System.env.WERCKER_GIT_COMMIT".substring(0,7)
+}
+
+group= "heisenbugdev.planck"
 archivesBaseName = "$System.env.WERCKER_GIT_REPOSITORY-$System.env.WERCKER_GIT_BRANCH"
 
 minecraft {
@@ -39,10 +42,10 @@ processResources
 
     from(sourceSets.main.resources.srcDirs) {
         include 'mcmod.info'
-                
+
         expand 'version':project.version, 'mcversion':project.minecraft.version
     }
-        
+
     from(sourceSets.main.resources.srcDirs) {
         exclude 'mcmod.info'
     }
